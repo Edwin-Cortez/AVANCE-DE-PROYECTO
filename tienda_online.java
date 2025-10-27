@@ -1,133 +1,7 @@
-// ============================================
-// ESTRUCTURA DEL PROYECTO
-// ============================================
-// TiendaOnline/
-// ├── README.md
-// ├── src/
-// │   ├── Main.java
-// │   ├── Producto.java
-// │   ├── Cliente.java
-// │   ├── ProductoService.java
-// │   └── ClienteService.java
-// └── .gitignore
 
-// ============================================
-// ARCHIVO: README.md
-// ============================================
-/*
-# 🛒 TiendaOnline - Sistema de Gestión
 
-## Descripción del Proyecto
-Sistema simple de tienda online similar a Amazon que permite gestionar productos y clientes.
-
-## Funcionalidades Implementadas
-
-### ✅ CRUD Completo de Productos
-- **Crear**: Agregar nuevos productos a la tienda
-- **Leer**: Visualizar todos los productos disponibles
-- **Actualizar**: Modificar información de productos existentes
-- **Eliminar**: Quitar productos del catálogo
-
-### ✅ CRUD Completo de Clientes
-- **Crear**: Registrar nuevos clientes
-- **Leer**: Ver listado de clientes registrados
-- **Actualizar**: Actualizar datos de clientes
-- **Eliminar**: Eliminar clientes del sistema
-
-## Componentes del Proyecto
-
-### 📦 Entidades
-- **Producto**: Representa los artículos en venta (ID, nombre, descripción, precio, stock)
-- **Cliente**: Representa los usuarios de la tienda (ID, nombre, email, dirección)
-
-### 🔧 Servicios
-- **ProductoService**: Gestiona todas las operaciones CRUD de productos
-- **ClienteService**: Gestiona todas las operaciones CRUD de clientes
-
-### 🎯 Repositorios
-- Los servicios utilizan ArrayList como almacenamiento en memoria (simulando base de datos)
-
-## Validaciones Implementadas
-
-### Validación de Productos:
-- ✓ Nombre no puede estar vacío
-- ✓ Precio debe ser mayor a 0
-- ✓ Stock no puede ser negativo
-- ✓ Descripción obligatoria
-
-### Validación de Clientes:
-- ✓ Nombre obligatorio
-- ✓ Email con formato válido (contiene @)
-- ✓ Dirección no puede estar vacía
-
-## Manejo de Errores
-- Control de IDs duplicados
-- Validación de campos obligatorios
-- Mensajes de error descriptivos
-- Verificación de rangos numéricos
-
-## Cómo Ejecutar
-
-### Requisitos:
-- Java 8 o superior
-- JDK instalado
-
-### Pasos:
-1. Clonar el repositorio
-2. Navegar a la carpeta src/
-3. Compilar: `javac Main.java Producto.java Cliente.java ProductoService.java ClienteService.java`
-4. Ejecutar: `java Main`
-
-## Tecnologías Utilizadas
-- Java SE
-- Programación Orientada a Objetos
-- Colecciones (ArrayList)
-- Manejo de excepciones
-
-## Autor
-Proyecto desarrollado para curso de Programación
-
-## Notas
-- Sistema funciona en memoria (datos se pierden al cerrar)
-- Interfaz de consola básica
-- Código simple y fácil de entender
-*/
-
-// ============================================
-// ARCHIVO: .gitignore
-// ============================================
-/*
-# Compiled class files
-*.class
-
-# Log files
-*.log
-
-# Package Files
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# IDE specific files
-.idea/
-*.iml
-.vscode/
-.DS_Store
-
-# Compiled output
-bin/
-build/
-out/
-target/
-*/
-
-// ============================================
 // ARCHIVO: Producto.java
-// ============================================
+
 public class Producto {
     private int id;
     private String nombre;
@@ -164,9 +38,9 @@ public class Producto {
     }
 }
 
-// ============================================
+
 // ARCHIVO: Cliente.java
-// ============================================
+
 public class Cliente {
     private int id;
     private String nombre;
@@ -199,9 +73,9 @@ public class Cliente {
     }
 }
 
-// ============================================
+
 // ARCHIVO: ProductoService.java
-// ============================================
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -299,9 +173,9 @@ public class ProductoService {
     }
 }
 
-// ============================================
+
 // ARCHIVO: ClienteService.java
-// ============================================
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -394,9 +268,9 @@ public class ClienteService {
     }
 }
 
-// ============================================
+
 // ARCHIVO: Main.java
-// ============================================
+
 import java.util.Scanner;
 
 public class Main {
@@ -405,9 +279,9 @@ public class Main {
     private static Scanner scanner = new Scanner(System.in);
     
     public static void main(String[] args) {
-        System.out.println("╔════════════════════════════════════╗");
-        System.out.println("║   TIENDA ONLINE - SISTEMA CRUD     ║");
-        System.out.println("╚════════════════════════════════════╝");
+        System.out.println("-------------------------------------- ");
+        System.out.println("║   TIENDA ONLINE - SISTEMA CRUD      ║");
+        System.out.println("---------------------------------------");
         
         // Datos de ejemplo precargados
         cargarDatosEjemplo();
